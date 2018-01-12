@@ -39,7 +39,7 @@ if (answer1 === "yes" || answer1 === "y") {
     }
 }
 // End of loop. The user is now ready to play the game
-alert("Right on! Let's see how well you know Khoa, " + user + ".");
+alert("Right on! Let's see how well you know Khoa, " + user + ". The Grand Prize: you can exchange 7 points for a brand new Tesla!");
 
 // Question 1
 var answer4 = prompt("First question: What is Khoa's favorite food?").toLowerCase();
@@ -63,4 +63,23 @@ if (answer5 === "parks and rec" || answer5 === "parks and recreation" || answer5
 
 }
 // Question 3
-var answer6 = prompt("We're moving on to question 3 now. Does Khoa own more than 15 pairs of shoes?" ,"Respond with Yes or No").toLowerCase(); 
+var answer6 = prompt("We're moving on to question 3 now. Does Khoa own more than 20 pairs of shoes?" ,"Respond with Yes or No").toLowerCase();
+console.log("answer to question 6 is: " + answer6);
+
+if (answer6 === "yes" || "y") {
+    userPoints++;
+    alert("Yeah it's shocking. I think he has a problem.");
+} else {
+    alert("Actually, " + user + ", you'd be surprised. I think he has a problem.");
+}
+
+// Half way mark
+alert("You're half way there! you now have " + userPoints + " point(s).");
+
+// Question 4
+
+var answer7 = prompt("Question 4: Was Khoa born in Vietnam?").toLowerCase();
+console.log("answer to question 7 is: " + answer7);
+
+
+

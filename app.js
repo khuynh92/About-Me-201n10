@@ -36,6 +36,7 @@ if (answer1 === "yes" || answer1 === "y") {
         } else if (answer3 === "no" || answer3 === "n") {
             answer2 = 0;
         } else {
+            // Typo error check
             alert("You must answer with Yes or No.");
         }
     }
@@ -55,6 +56,7 @@ while (answer4 !== "yes" || answer4 !== "y" || answer4 !== "no" || answer4 !== "
         alert("Correct! You got your first point! One step closer to your Tesla!");
         break;
     } else {
+        // Typo error check
         alert("you must answer with a Yes or No.");
     }
 }
@@ -74,6 +76,7 @@ while (answer5 !== "yes" || answer5 !== "y" || answer5 !== "no" || answer5 !== "
         alert("That's right! There is no other food more unappealing than mushrooms. Why would you want to eat fungi!?!");
         break;
     } else {
+        // Typo error check
         alert ("you must answer with a Yes or No.");
     }
 }
@@ -84,7 +87,7 @@ alert("You currently have " + userPoints + " point(s)! Keep going!");
 // Question 3
 while (answer6 !== "yes" || answer6 !== "y" || answer6 !== "no" || answer6 !== "n") {
     var answer6 = prompt("Question 3: Does Khoa like sushi?", "Respond with Yes or No");
-    console.log("Answer to trivia 3 is: " + answer6);
+    console.log("answer to trivia 3 is: " + answer6);
     if (answer6 === "yes" || answer6 === "y") {
         userPoints++;
         alert("Correct! The quickest way to Khoa's heart is with sushi. You now have " + userPoints + " points!");
@@ -93,6 +96,7 @@ while (answer6 !== "yes" || answer6 !== "y" || answer6 !== "no" || answer6 !== "
         alert("Wow.. I really thought you would've gotten this one right. Of course he likes sushi. You still have " + userPoints + " point(s)");
         break;
     } else {
+        // Typo error check
         alert("You must answer with a Yes or No.");
     }
 }
@@ -109,6 +113,7 @@ while (answer7 !== "yes" || answer7 !== "y" || answer7 !== "no" || answer7 !== "
         alert("Actually, " + user + ", he does... I think he has a problem.");
         break;
     } else {
+        // Typo error check
         alert("You must answer with Yes or No");
     }
 }
@@ -125,11 +130,12 @@ while (answer8 !== "yes" || answer8 !== "y" || answer8 !== "no" || answer8 !== "
         alert("Fantastic job! Dog's are Khoa's second favorite animal. His first favorite are wolves!");
         break;
     } else {
+        // Typo error check
         alert("You must answer with Yes or No");
     }
 }
 
-// Bonus Question Alert
+// Scor update and Bonus Question Alert
 alert("You now have " + userPoints + " point(s).");
 
 alert("We are now entering the BONUS round, where each correct answer is 2 points!");

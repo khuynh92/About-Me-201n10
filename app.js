@@ -184,7 +184,11 @@ for (var i = 0; i < 4; i++) {
 
 
 // End of game alerts
-alert('Woah there. You\'re extremely close. you only need ' + (10 - userPoints) + ' point(s) left to be able to redeem a brand new Tesla! Moving on to the last question now');
+if (userPoints < 10) {
+  alert('Woah there. You\'re extremely close. you only need ' + (10 - userPoints) + ' point(s) left to be able to redeem a brand new Tesla! Moving on to the last question now');
+} else {
+  alert('Holy Bologna, made it over 10 points!');
+}
 
 alert('ERROR!');
 

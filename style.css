@@ -1,6 +1,11 @@
 * {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: rgb(243, 238, 232);   
+    background-color: rgb(243, 238, 232);
+}
+body {
+    width: 960px;
+    margin: auto;
+    
 }
 header {
     margin: 10px auto 10px auto;
@@ -9,25 +14,23 @@ header {
     color: rgb(4, 36, 22);
     width: 400px;
     border: 3px solid rgb(37, 37, 37);
-    border-radius: 5px;   
+    border-radius: 5px;  
 }
-article.shows {
-    margin: 10px 300px 10px 10px;
-    text-align: center;
-    color: rgb(68, 70, 69);
-    width: 400px;
-    border: 2px solid  rgb(37, 37, 37);
-    float: right;
-    padding: 2px;
+section {
+    
+    width: 100%;
 }
 
-article.food {
-    margin: 10px 10px 10px 300px;
+
+article {
+    margin: 20px;
     text-align: center;
     color: rgb(68, 70, 69);
     width: 400px;
+    height:192.83px;
     border: 2px solid  rgb(37, 37, 37);
     float: left;
     padding: 2px;
 }
+
 

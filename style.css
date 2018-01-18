@@ -1,63 +1,65 @@
 * {
     font-family: Arial, Helvetica, sans-serif;
+    color: rgb(68, 70, 69);
+
 }
 body {
-    width: 90%;
+    width: 95%;
     margin: 0 auto;  
     background-color: rgb(245, 239, 233);
 }
+
 #coverImage {
+    width: 100%;
     display: block;
     margin: 0 auto;
 }
+
 h1 {
-    margin: 1% auto;
-    font-size: 20px;
+    background-color: rgb(226, 221, 221);
+    margin: 5px auto;
+    font-size: 2em;
     text-align: center;
-    color: rgb(4, 36, 22);
-    width: 400px;
-    border: 3px solid rgb(37, 37, 37);
+    width: 33.3%;
+    border: 2px solid rgb(37, 37, 37);
     border-radius: 5px;  
 }
-div.lists {
-    width: 100%;
-    overflow: auto;
+
+h2 {
+    font-size: 1.5em;
 }
+
+#lists {
+    margin: auto;
+    overflow: auto;
+    white-space: nowrap;
+    text-align: center;
+}
+
 #foods, 
 #shows,
-#hiddenbox {
-    width: 30%;
-    float: left;
-    color: rgb(68, 70, 69);
+#hiddenbox {    
+    background-color: rgb(226, 221, 221);
+    display: inline-block;
+    width: 31.3%;
     border: 2px solid  rgb(37, 37, 37);
-    padding: 2px;
-}
-
-#hiddenbox {
-    visibility: hidden;
-}
-
-
-    /*
-    create hidden elements to space the boxes evenly
-    page 486
-    margin: 20px;
-    color: rgb(68, 70, 69);
-    width: 400px;
-    height:192.83px;
-    border: 2px solid  rgb(37, 37, 37);
-    float: left;
-    padding: 2px;
-    *.
-}
-h2 {
+    border-radius: 5px;  
     text-align: center;
-    
-}
-ul, ol {
-    text-align: left;
-    list-style-position: inside;
+    margin: 0;
+    vertical-align: bottom;   
 }
 
+#shows {
+    height: 157.33px; 
+}
+
+ul, ol {
+    list-style-position: inside;
+    text-align: left;
+}
+
+#hiddenbox {
+   visibility: hidden;
+}
 
 

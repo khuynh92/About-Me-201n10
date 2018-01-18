@@ -50,16 +50,21 @@ while(answer1 !== 'y' || answer1 !== 'yes' || answer1 !== 'no' || answer1 !== 'n
 // End of loop. The user is now ready to play the game
 alert('Right on! Let\'s see how well you know Khoa, ' + user + '. The Grand Prize: you can exchange 10 points for a brand new Tesla!');
 
-// Question 1
+var questions = ['Question 1: Was Khoa born in Vietnam?', 'Question 2: Does Khoa love mushrooms?', 'Question 3: Does Khoa like sushi?', 'We\'re moving on to question 4 now. Does Khoa own more than 20 pairs of shoes?', 'Last question, ' + user + '! Are dogs Khoa\'s favorite animal?'];
+
+var answerYes = ['Incorrect! Khoa was actually born and raised in Washington!', 'Yeah no.......sorry. Mushrooms are gross. Why would you want ot eat fungi!?!', 'Correct! The quickest way to Khoa\'s heart is with sushi. You now have ' + userPoints + ' points!', 'Yeah it\'s shocking. I think he has a problem.', 'Ooh so close. Dog\'s are his favorite second animal. his first favorite are wolves!'];
+
+var answerNo = ['Correct! You got your first point! One step closer to your Tesla!', 'That\'s right! There is no other food more unappealing than mushrooms. Why would you want to eat fungi!?!', 'Wow.. I really thought you would\'ve gotten this one right. Of course he likes sushi. You still have ' + userPoints + ' point(s)', 'Actually, ' + user + ', he does... I think he has a problem.', 'Fantastic job! Dog\'s are Khoa\'s second favorite animal. His first favorite are wolves!'];
+
 while (answer4 !== 'yes' || answer4 !== 'y' || answer4 !== 'no' || answer4 !== 'n') {
-  var answer4 = prompt('Question 1: Was Khoa born in Vietnam?', 'Respond with Yes or No').toLowerCase();
+  var answer4 = prompt(questions[0], 'Respond with Yes or No').toLowerCase();
   console.log('answer to trivia 1 is: ' + answer4);
   if (answer4 === 'yes' || answer4 === 'y') {
-    alert('Incorrect! Khoa was actually born and raised in Washington!');
+    alert(answerYes[0]);
     break;
   } else if (answer4 === 'no' || answer4 === 'n') {
     userPoints++;
-    alert('Correct! You got your first point! One step closer to your Tesla!');
+    alert(answerNo[0]);
     break;
   } else {
     // Typo error check
@@ -68,18 +73,18 @@ while (answer4 !== 'yes' || answer4 !== 'y' || answer4 !== 'no' || answer4 !== '
 }
 
 // Score update
-alert('You now have   ' + userPoints + ' point(s)! Let\'s move on to the next question.');
+alert('You now have ' + userPoints + ' point(s)! Let\'s move on to the next question.');
 
 // Question 2
 while (answer5 !== 'yes' || answer5 !== 'y' || answer5 !== 'no' || answer5 !== 'n') {
-  var answer5 = prompt('Question 2: Does Khoa love mushrooms?', 'Respond with Yes or No').toLowerCase();
+  var answer5 = prompt(questions[1], 'Respond with Yes or No').toLowerCase();
   console.log('answer to trivia 2 is: ' + answer5);
   if (answer5 === 'yes' || answer5 === 'y') {
-    alert('Yeah no.......sorry. Mushrooms are gross. Why would you want ot eat fungi!?!');
+    alert(answerYes[1]);
     break;
   } else if (answer5 === 'no' || answer5 === 'n') {
     userPoints++;
-    alert('That\'s right! There is no other food more unappealing than mushrooms. Why would you want to eat fungi!?!');
+    alert(answerNo[1]);
     break;
   } else {
     // Typo error check
@@ -92,14 +97,14 @@ alert('You currently have ' + userPoints + ' point(s)! Keep going!');
 
 // Question 3
 while (answer6 !== 'yes' || answer6 !== 'y' || answer6 !== 'no' || answer6 !== 'n') {
-  var answer6 = prompt('Question 3: Does Khoa like sushi?', 'Respond with Yes or No');
+  var answer6 = prompt(questions[2], 'Respond with Yes or No');
   console.log('answer to trivia 3 is: ' + answer6);
   if (answer6 === 'yes' || answer6 === 'y') {
     userPoints++;
-    alert('Correct! The quickest way to Khoa\'s heart is with sushi. You now have ' + userPoints + ' points!');
+    alert(answerYes[2]);
     break;
   } else if (answer6 === 'no' || answer6 === 'n') {
-    alert('Wow.. I really thought you would\'ve gotten this one right. Of course he likes sushi. You still have ' + userPoints + ' point(s)');
+    alert(answerNo[2]);
     break;
   } else {
   // Typo error check
@@ -109,14 +114,14 @@ while (answer6 !== 'yes' || answer6 !== 'y' || answer6 !== 'no' || answer6 !== '
 
 // Question 4
 while (answer7 !== 'yes' || answer7 !== 'y' || answer7 !== 'no' || answer7 !== 'n') {
-  var answer7 = prompt('We\'re moving on to question 4 now. Does Khoa own more than 15 pairs of shoes?' ,'Respond with Yes or No').toLowerCase();
+  var answer7 = prompt(questions[3], 'Respond with Yes or No').toLowerCase();
   console.log('answer to trivia 4 is: ' + answer7);
   if (answer7 === 'yes' || answer7 === 'y') {
     userPoints++;
-    alert('Yeah it\'s shocking. I think he has a problem.');
+    alert(answerYes[3]);
     break;
   } else if (answer7 === 'no' || answer7 === 'n') {
-    alert('Actually, ' + user + ', he does... I think he has a problem.');
+    alert(answerNo[3]);
     break;
   } else {
     // Typo error check
@@ -126,14 +131,14 @@ while (answer7 !== 'yes' || answer7 !== 'y' || answer7 !== 'no' || answer7 !== '
 
 // Question 5
 while (answer8 !== 'yes' || answer8 !== 'y' || answer8 !== 'no' || answer8 !== 'n') {
-  var answer8 = prompt('Last question, ' + user + '! Are dogs Khoa\'s favorite animal?', 'Respond with Yes or No').toLowerCase();
+  var answer8 = prompt(questions[4], 'Respond with Yes or No').toLowerCase();
   console.log('answer to trivia 5 is: ' + answer8);
   if (answer8 === 'yes' || answer8 === 'y') {
-    alert('Ooh so close. Dog\'s are his favorite second animal. his first favorite are wolves!');
+    alert(answerYes[4]);
     break;
   } else if (answer8 === 'n' || answer8 === 'no') {
     userPoints++;
-    alert('Fantastic job! Dog\'s are Khoa\'s second favorite animal. His first favorite are wolves!');
+    alert(answerNo[4]);
     break;
   } else {
     // Typo error check

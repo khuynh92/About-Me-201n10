@@ -48,13 +48,15 @@ while(answer1 !== 'y' || answer1 !== 'yes' || answer1 !== 'no' || answer1 !== 'n
   }
 }
 // End of loop. The user is now ready to play the game
-alert('Right on! Let\'s see how well you know Khoa, ' + user + '. The Grand Prize: you can exchange 10 points for a brand new Tesla!');
+alert('Right on! Let\'s see how well you know Khoa, ' + user + '. The Grand Priz can exchange 10 points for a brand new Tesla!');
 
 var questions = ['Question 1: Was Khoa born in Vietnam?', 'Question 2: Does Khoa love mushrooms?', 'Question 3: Does Khoa like sushi?', 'We\'re moving on to question 4 now. Does Khoa own more than 20 pairs of shoes?', 'Last question, ' + user + '! Are dogs Khoa\'s favorite animal?'];
 
 var answerYes = ['Incorrect! Khoa was actually born and raised in Washington!', 'Yeah no.......sorry. Mushrooms are gross. Why would you want ot eat fungi!?!', 'Correct! The quickest way to Khoa\'s heart is with sushi. You now have ' + userPoints + ' points!', 'Yeah it\'s shocking. I think he has a problem.', 'Ooh so close. Dog\'s are his favorite second animal. his first favorite are wolves!'];
 
 var answerNo = ['Correct! You got your first point! One step closer to your Tesla!', 'That\'s right! There is no other food more unappealing than mushrooms. Why would you want to eat fungi!?!', 'Wow.. I really thought you would\'ve gotten this one right. Of course he likes sushi. You still have ' + userPoints + ' point(s)', 'Actually, ' + user + ', he does... I think he has a problem.', 'Fantastic job! Dog\'s are Khoa\'s second favorite animal. His first favorite are wolves!'];
+
+//Make an array for Questions, an array for correct and incorrect responses, and an array for correct answers
 
 while (answer4 !== 'yes' || answer4 !== 'y' || answer4 !== 'no' || answer4 !== 'n') {
   var answer4 = prompt(questions[0], 'Respond with Yes or No').toLowerCase();
@@ -186,7 +188,6 @@ for (var i = 0; i < 4; i++) {
 } else {
   alert('I thought you would\'ve gotten this one right, ' + user + '. I\'m losing my faith in you. Everyone knows, hands down, Parks and Recreation is better than The Office. You now have ' + userPoints + ' point(s).');
 }
-
 
 // End of game alerts
 if (userPoints < 10) {

@@ -61,7 +61,7 @@ var correctAnswer = ['n', 'n', 'y', 'y', 'n'];
 //Make an array for Questions, an array for correct and incorrect responses, and an array for correct answers
 
 function yesOrNo (questions, correctResponse, incorrectResponse, correctAnswer) {
-  var userResponse = prompt(questions).toLowerCase(); 
+  var userResponse = prompt(questions).toLowerCase();
   console.log('Answer to question: ' + ' will flesh out'); //Will use for loop to keep updated
   if(userResponse.substring(0,1) === correctAnswer) {
     userPoints++;
@@ -80,41 +80,45 @@ for(var i = 0; i < questions.length; i++){
 alert('We are now entering the BONUS round, where each correct answer is 2 points!');
 
 //Bonus Question 1
-var food = ['pizza', 'pho', 'spring rolls', 'spaghetti', 'sushi'];
+function bonus1 () {
+  var food = ['pizza', 'pho', 'spring rolls', 'spaghetti', 'sushi'];
 
-var answer9 = prompt('First question: What is Khoa\'s favorite food? You\'re lucky that he has have multiple favorites, so there will be more than one right answer').toLowerCase();
-console.log('answer to bonus 1 is: ' + answer9);
-for (var x = 0; x < food.length; x++) {
-  if (answer9 === food[x]) {
-    userPoints += 2;
-    break;
+  var answer9 = prompt('First question: What is Khoa\'s favorite food? You\'re lucky that he has have multiple favorites, so there will be more than one right answer').toLowerCase();
+  console.log('answer to bonus 1 is: ' + answer9);
+  for (var x = 0; x < food.length; x++) {
+    if (answer9 === food[x]) {
+      userPoints += 2;
+      break;
+    }
+  } if (answer9 === food[x]) {
+    alert('That\'s right! Thats an extra 2 points for you, bringing you to a total of ' + userPoints + '!');
+  } else {
+    alert('That was an easy one, and you still managed to get it wrong, ' + user + '. You still have ' + userPoints + '.');
   }
-} if (answer9 === food[x]) {
-  alert('That\'s right! Thats an extra 2 points for you, bringing you to a total of ' + userPoints + '!');
-} else {
-  alert('That was an easy one, and you still managed to get it wrong, ' + user + '. You still have ' + userPoints + '.');
 }
-
-
+bonus1();
 // Bonus Question 2
-var tvShows = ['parks and rec', 'parks and recreation', 'parks & recreation', 'parks & rec', 'lost', 'master of none'];
 
-var answer10 = prompt('Question 2: What is Khoa\'s favorite TV show? Again he has multiple, but if you guess his most favorite, you get 4 points! Hint: The show is better than parks and recreation').toLowerCase();
-console.log('answer to bonus 2 is: ' + answer10);
-for (var i = 0; i < 4; i++) {
-  if (answer10 === tvShows[i]) {
-    userPoints += 2;
-    break;
+function bonus2() {
+  var tvShows = ['parks and rec', 'parks and recreation', 'parks & recreation', 'parks & rec', 'lost', 'master of none'];
+
+  var answer10 = prompt('Question 2: What is Khoa\'s favorite TV show? Again he has multiple, but if you guess his most favorite, you get 4 points! Hint: The show is better than parks and recreation').toLowerCase();
+  console.log('answer to bonus 2 is: ' + answer10);
+  for (var i = 0; i < 4; i++) {
+    if (answer10 === tvShows[i]) {
+      userPoints += 2;
+      break;
+    }
+  } if (answer10 === tvShows[5]) {
+    userPoints += 4;
+    alert('Jackpot!!! I didn\'t think anyone would get that correct! You now have ' + userPoints + ' point(s)!');
+  } else if (answer10 === tvShows[i]) {
+    alert('I knew you could do it, ' + user + '! You now have ' + userPoints + ' point(s)! ' + tvShows[i] + ' isn\'t Khoa\'s favorite show, so you only get 2 points.');
+  } else {
+    alert('I thought you would\'ve gotten this one right, ' + user + '. I\'m losing my faith in you. Everyone knows, hands down, Parks and Recreation is better than The Office. You now have ' + userPoints + ' point(s).');
   }
-} if (answer10 === tvShows[5]) {
-  userPoints += 4;
-  alert('Jackpot!!! I didn\'t think anyone would get that correct! You now have ' + userPoints + ' point(s)!');
-} else if (answer10 === tvShows[i]) {
-  alert('I knew you could do it, ' + user + '! You now have ' + userPoints + ' point(s)! ' + tvShows[i] + ' isn\'t Khoa\'s favorite show, so you only get 2 points.');
-} else {
-  alert('I thought you would\'ve gotten this one right, ' + user + '. I\'m losing my faith in you. Everyone knows, hands down, Parks and Recreation is better than The Office. You now have ' + userPoints + ' point(s).');
 }
-
+bonus2();
 // End of game alerts
 if (userPoints < 10) {
   alert('Woah there. You\'re extremely close. you only need ' + (10 - userPoints) + ' point(s) left to be able to redeem a brand new Tesla! Moving on to the last question now');

@@ -2,7 +2,8 @@
 
 Assignment for 201 - Lab 4 - Pair Programming
 
-##Contributors
+
+## Contributors
 ***
 Driver: Eric Singleton
 Navigator: Khoa Huynh

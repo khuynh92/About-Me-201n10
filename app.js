@@ -52,143 +52,73 @@ alert('Right on! Let\'s see how well you know Khoa, ' + user + '. The Grand Priz
 
 var questions = ['Question 1: Was Khoa born in Vietnam?', 'Question 2: Does Khoa love mushrooms?', 'Question 3: Does Khoa like sushi?', 'We\'re moving on to question 4 now. Does Khoa own more than 20 pairs of shoes?', 'Last question, ' + user + '! Are dogs Khoa\'s favorite animal?'];
 
-var answerYes = ['Incorrect! Khoa was actually born and raised in Washington!', 'Yeah no.......sorry. Mushrooms are gross. Why would you want ot eat fungi!?!', 'Correct! The quickest way to Khoa\'s heart is with sushi. You now have ' + userPoints + ' points!', 'Yeah it\'s shocking. I think he has a problem.', 'Ooh so close. Dog\'s are his favorite second animal. his first favorite are wolves!'];
+var correctResponse = ['Correct! You got your first point! One step closer to your Tesla!', 'That\'s right! There is no other food more unappealing than mushrooms. Why would you want to eay fungi!?!', 'Correct! The quickest way to Khoa\'s heart is with sushi.', 'Yeah it\'s shocking. I think he has a problem.', 'Fantastic job! Dog\'s are Khoa\'s second favorite animal. His first favorite are wolves!'];
 
-var answerNo = ['Correct! You got your first point! One step closer to your Tesla!', 'That\'s right! There is no other food more unappealing than mushrooms. Why would you want to eat fungi!?!', 'Wow.. I really thought you would\'ve gotten this one right. Of course he likes sushi. You still have ' + userPoints + ' point(s)', 'Actually, ' + user + ', he does... I think he has a problem.', 'Fantastic job! Dog\'s are Khoa\'s second favorite animal. His first favorite are wolves!'];
+var incorrectResponse = [ 'Incorrect! Khoa was actually born and raised in Washington!', 'Yeah no.......sorry. Mushrooms are gross. Why would you want ot eat fungi!?!', 'Wow.. I really thought you would\'ve gotten this one right. Of course he likes sushi.', 'Actually, ' + user + ', he does... I think he has a problem.', 'Ooh so close. Dog\'s are his favorite second animal. his first favorite are wolves!' ];
+
+var correctAnswer = ['n', 'n', 'y', 'y', 'n'];
 
 //Make an array for Questions, an array for correct and incorrect responses, and an array for correct answers
 
-while (answer4 !== 'yes' || answer4 !== 'y' || answer4 !== 'no' || answer4 !== 'n') {
-  var answer4 = prompt(questions[0], 'Respond with Yes or No').toLowerCase();
-  console.log('answer to trivia 1 is: ' + answer4);
-  if (answer4 === 'yes' || answer4 === 'y') {
-    alert(answerYes[0]);
-    break;
-  } else if (answer4 === 'no' || answer4 === 'n') {
+function yesOrNo (questions, correctResponse, incorrectResponse, correctAnswer) {
+  var userResponse = prompt(questions).toLowerCase();
+  console.log('Answer to question: ' + ' will flesh out'); //Will use for loop to keep updated
+  if(userResponse.substring(0,1) === correctAnswer) {
     userPoints++;
-    alert(answerNo[0]);
-    break;
+    alert(correctResponse);
+    return userPoints;
   } else {
-    // Typo error check
-    alert('you must answer with a Yes or No.');
+    alert(incorrectResponse);
   }
 }
 
-// Score update
-alert('You now have ' + userPoints + ' point(s)! Let\'s move on to the next question.');
-
-// Question 2
-while (answer5 !== 'yes' || answer5 !== 'y' || answer5 !== 'no' || answer5 !== 'n') {
-  var answer5 = prompt(questions[1], 'Respond with Yes or No').toLowerCase();
-  console.log('answer to trivia 2 is: ' + answer5);
-  if (answer5 === 'yes' || answer5 === 'y') {
-    alert(answerYes[1]);
-    break;
-  } else if (answer5 === 'no' || answer5 === 'n') {
-    userPoints++;
-    alert(answerNo[1]);
-    break;
-  } else {
-    // Typo error check
-    alert ('you must answer with a Yes or No.');
-  }
+for(var i = 0; i < questions.length; i++){
+  yesOrNo(questions[i],correctResponse[i],incorrectResponse[i], correctAnswer[i]);
+  alert('You currently have: ' + userPoints + ' point(s)!');
 }
-
-// Score update
-alert('You currently have ' + userPoints + ' point(s)! Keep going!');
-
-// Question 3
-while (answer6 !== 'yes' || answer6 !== 'y' || answer6 !== 'no' || answer6 !== 'n') {
-  var answer6 = prompt(questions[2], 'Respond with Yes or No');
-  console.log('answer to trivia 3 is: ' + answer6);
-  if (answer6 === 'yes' || answer6 === 'y') {
-    userPoints++;
-    alert(answerYes[2]);
-    break;
-  } else if (answer6 === 'no' || answer6 === 'n') {
-    alert(answerNo[2]);
-    break;
-  } else {
-  // Typo error check
-    alert('You must answer with a Yes or No.');
-  }
-}
-
-// Question 4
-while (answer7 !== 'yes' || answer7 !== 'y' || answer7 !== 'no' || answer7 !== 'n') {
-  var answer7 = prompt(questions[3], 'Respond with Yes or No').toLowerCase();
-  console.log('answer to trivia 4 is: ' + answer7);
-  if (answer7 === 'yes' || answer7 === 'y') {
-    userPoints++;
-    alert(answerYes[3]);
-    break;
-  } else if (answer7 === 'no' || answer7 === 'n') {
-    alert(answerNo[3]);
-    break;
-  } else {
-    // Typo error check
-    alert('You must answer with Yes or No');
-  }
-}
-
-// Question 5
-while (answer8 !== 'yes' || answer8 !== 'y' || answer8 !== 'no' || answer8 !== 'n') {
-  var answer8 = prompt(questions[4], 'Respond with Yes or No').toLowerCase();
-  console.log('answer to trivia 5 is: ' + answer8);
-  if (answer8 === 'yes' || answer8 === 'y') {
-    alert(answerYes[4]);
-    break;
-  } else if (answer8 === 'n' || answer8 === 'no') {
-    userPoints++;
-    alert(answerNo[4]);
-    break;
-  } else {
-    // Typo error check
-    alert('You must answer with Yes or No');
-  }
-}
-
-// Score update and Bonus Question Alert
-alert('You now have ' + userPoints + ' point(s).');
 
 alert('We are now entering the BONUS round, where each correct answer is 2 points!');
 
 //Bonus Question 1
-var food = ['pizza', 'pho', 'spring rolls', 'spaghetti', 'sushi'];
+function bonus1 () {
+  var food = ['pizza', 'pho', 'spring rolls', 'spaghetti', 'sushi'];
 
-var answer9 = prompt('First question: What is Khoa\'s favorite food? You\'re lucky that he has have multiple favorites, so there will be more than one right answer').toLowerCase();
-console.log('answer to bonus 1 is: ' + answer9);
-for (var x = 0; x < food.length; x++) {
-  if (answer9 === food[x]) {
-    userPoints += 2;
-    break;
+  var answer9 = prompt('First question: What is Khoa\'s favorite food? You\'re lucky that he has have multiple favorites, so there will be more than one right answer').toLowerCase();
+  console.log('answer to bonus 1 is: ' + answer9);
+  for (var x = 0; x < food.length; x++) {
+    if (answer9 === food[x]) {
+      userPoints += 2;
+      break;
+    }
+  } if (answer9 === food[x]) {
+    alert('That\'s right! Thats an extra 2 points for you, bringing you to a total of ' + userPoints + '!');
+  } else {
+    alert('That was an easy one, and you still managed to get it wrong, ' + user + '. You still have ' + userPoints + '.');
   }
-} if (answer9 === food[x]) {
-  alert('That\'s right! Thats an extra 2 points for you, bringing you to a total of ' + userPoints + '!');
-} else {
-  alert('That was an easy one, and you still managed to get it wrong, ' + user + '. You still have ' + userPoints + '.');
 }
-
-
+bonus1();
 // Bonus Question 2
-var tvShows = ['parks and rec', 'parks and recreation', 'parks & recreation', 'parks & rec', 'lost', 'master of none'];
 
-var answer10 = prompt('Question 2: What is Khoa\'s favorite TV show? Again he has multiple, but if you guess his most favorite, you get 4 points! Hint: The show is better than parks and recreation').toLowerCase();
-console.log('answer to bonus 2 is: ' + answer10);
-for (var i = 0; i < 4; i++) {
-  if (answer10 === tvShows[i]) {
-    userPoints += 2;
-    break;
+function bonus2() {
+  var tvShows = ['parks and rec', 'parks and recreation', 'parks & recreation', 'parks & rec', 'lost', 'master of none'];
+
+  var answer10 = prompt('Question 2: What is Khoa\'s favorite TV show? Again he has multiple, but if you guess his most favorite, you get 4 points! Hint: The show is better than parks and recreation').toLowerCase();
+  console.log('answer to bonus 2 is: ' + answer10);
+  for (var i = 0; i < 4; i++) {
+    if (answer10 === tvShows[i]) {
+      userPoints += 2;
+      break;
+    }
+  } if (answer10 === tvShows[5]) {
+    userPoints += 4;
+    alert('Jackpot!!! I didn\'t think anyone would get that correct! You now have ' + userPoints + ' point(s)!');
+  } else if (answer10 === tvShows[i]) {
+    alert('I knew you could do it, ' + user + '! You now have ' + userPoints + ' point(s)! ' + tvShows[i] + ' isn\'t Khoa\'s favorite show, so you only get 2 points.');
+  } else {
+    alert('I thought you would\'ve gotten this one right, ' + user + '. I\'m losing my faith in you. Everyone knows, hands down, Parks and Recreation is better than The Office. You now have ' + userPoints + ' point(s).');
   }
-} if (answer10 === tvShows[5]) {
-  userPoints += 4;
-  alert('Jackpot!!! I didn\'t think anyone would get that correct! You now have ' + userPoints + ' point(s)!');
-} else if (answer10 === tvShows[i]) {
-  alert('I knew you could do it, ' + user + '! You now have ' + userPoints + ' point(s)! ' + tvShows[i] + ' isn\'t Khoa\'s favorite show, so you only get 2 points.');
-} else {
-  alert('I thought you would\'ve gotten this one right, ' + user + '. I\'m losing my faith in you. Everyone knows, hands down, Parks and Recreation is better than The Office. You now have ' + userPoints + ' point(s).');
 }
-
+bonus2();
 // End of game alerts
 if (userPoints < 10) {
   alert('Woah there. You\'re extremely close. you only need ' + (10 - userPoints) + ' point(s) left to be able to redeem a brand new Tesla! Moving on to the last question now');

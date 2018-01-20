@@ -1,0 +1,55 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(68, 70, 69);
+}
+body {
+    width: 95%;
+    margin: 0 auto;  
+    background-color: rgb(245, 239, 233);
+}
+
+#coverImage {
+    background-color: rgb(226, 221, 221);
+    width: 100%;
+    display: block;
+}
+
+h1 {
+    background-color: rgb(226, 221, 221);
+    margin: 5px auto;
+    font-size: 2em;
+    text-align: center;
+    width: 33.3%;
+    border: 2px solid rgb(37, 37, 37);
+    border-radius: 5px;  
+}
+
+h2 {
+    font-size: 1.5em;
+}
+
+#lists {
+    margin: auto;
+    white-space: nowrap;
+    text-align: center;
+}
+
+#foods, 
+#shows,
+#hobbies {
+    overflow: auto;  
+    background-color: rgb(226, 221, 221);
+    display: inline-block;
+    width: 33%;
+    border: 2px solid  rgb(37, 37, 37);
+    border-radius: 5px;  
+    text-align: center;
+    margin: 0;
+    vertical-align: bottom;
+    height: 157.33px;    
+}
+ul, ol {
+    list-style-position: inside;
+    text-align: left;
+}
+

@@ -1,9 +1,10 @@
 # About-Me-201n10
 
-Assignment for 201 - Lab 4 - Pair Programming
 
 
 ## Contributors
 ***
+
+Lab 4 was done through pair programming
 Driver: Eric Singleton
 Navigator: Khoa Huynh
